@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 96" fill="none" role="img" aria-label="FixPro Línea Blanca">
+  <defs>
+    <linearGradient id="lbBadgeGrad" x1="4" y1="4" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#123A66"/>
+      <stop offset="0.55" stop-color="#0B1E36"/>
+      <stop offset="1" stop-color="#05070D"/>
+    </linearGradient>
+    <linearGradient id="lbFGrad" x1="18" y1="14" x2="46" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#CFE7FA"/>
+    </linearGradient>
+  </defs>
+
+  <g>
+    <rect x="2" y="2" width="60" height="60" rx="17" fill="url(#lbBadgeGrad)"/>
+    <rect x="2.75" y="2.75" width="58.5" height="58.5" rx="16.25" stroke="#3AB0FF" stroke-opacity="0.35" stroke-width="1.5"/>
+    <path d="M21 16H43C44.1046 16 45 16.8954 45 18V20.5C45 21.6046 44.1046 22.5 43 22.5H27.5V29H39C40.1046 29 41 29.8954 41 31V33.5C41 34.6046 40.1046 35.5 39 35.5H27.5V46C27.5 47.1046 26.6046 48 25.5 48H21.5C20.3954 48 19.5 47.1046 19.5 46V18C19.5 16.8954 20.3954 16 21.5 16H21Z" fill="url(#lbFGrad)"/>
+    <circle cx="47" cy="17" r="4.5" fill="#38BDF8"/>
+  </g>
+
+  <text x="80" y="42" font-family="'Space Grotesk','Poppins',Arial,sans-serif" font-weight="700" font-size="30" letter-spacing="0.2">
+    <tspan fill="#FFFFFF">Fix</tspan><tspan fill="#38BDF8">Pro</tspan>
+  </text>
+  <text x="81" y="63" font-family="'Inter',Arial,sans-serif" font-weight="600" font-size="13" letter-spacing="3.5" fill="#9FB3C8">LÍNEA BLANCA</text>
+</svg>

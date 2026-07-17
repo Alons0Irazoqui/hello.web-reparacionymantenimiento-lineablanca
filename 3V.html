@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <title>FixPro Línea Blanca | Reparación de Refrigeradores, Lavadoras y Línea Blanca</title>
+  <meta name="description" content="Servicio técnico especializado en línea blanca: refrigeradores, enfriadores, lavadoras, boilers, estufas y extractores. Más de 30 años de experiencia y servicio el mismo día. Escríbenos por WhatsApp al +52 961 175 0266." />
+  <meta name="keywords" content="reparación de refrigeradores, reparación de lavadoras, servicio técnico línea blanca, reparación de boilers, reparación de estufas, reparación de extractores, mantenimiento de enfriadores, mesas frías, técnico línea blanca a domicilio, reparación de electrodomésticos" />
+  <meta property="og:title" content="FixPro Línea Blanca | Servicio Técnico de Refrigeradores, Lavadoras y Línea Blanca" />
+  <meta property="og:description" content="Más de 30 años reparando refrigeradores, lavadoras, boilers, estufas, extractores y equipos de refrigeración comercial. Servicio el mismo día." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_MX" />
+  <meta property="og:image" content="imagenes/logo.svg" />
+
+  <!--
+    ✅ Datos reales confirmados: teléfono / WhatsApp +52 961 175 0266.
+    ⚠️ Sin marca, logo, redes sociales, dirección exacta, horario ni testimonios
+       confirmados por el cliente al momento de este desarrollo — por eso no se
+       incluyen en el sitio. Nombre de marca y logotipo propuestos por el
+       desarrollador (FixPro Línea Blanca), sujetos a validación con el cliente.
+  -->
+
+  <link rel="icon" type="image/svg+xml" href="imagenes/icono.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  PRELOADER                                                  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div id="preloader" class="preloader">
+  <div class="preloader-bg"></div>
+  <div class="preloader-particles" id="preloaderParticles"></div>
+  <div class="preloader-content">
+    <div class="preloader-logo-wrap">
+      <div class="preloader-rings">
+        <div class="p-ring p-ring-1"></div>
+        <div class="p-ring p-ring-2"></div>
+        <div class="p-ring p-ring-3"></div>
+      </div>
+      <div class="preloader-logo-circle">
+        <img src="imagenes/icono.svg" alt="FixPro Línea Blanca" class="preloader-logo-img" />
+      </div>
+    </div>
+    <div class="preloader-brand-name">
+      <span class="p-name">Fix</span><span class="p-mg">Pro</span>
+    </div>
+    <p class="preloader-tagline-text">Servicio Técnico Especializado en Línea Blanca</p>
+    <div class="preloader-progress-wrap">
+      <div class="preloader-progress-bar" id="progressBar"></div>
+    </div>
+    <div class="preloader-percent" id="progressPercent">0%</div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  HEADER / NAVBAR                                            -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<header id="navbar" class="navbar">
+  <div class="navbar-inner">
+    <a href="#inicio" class="nav-logo" aria-label="FixPro Línea Blanca">
+      <img src="imagenes/logo.svg" alt="FixPro Línea Blanca — Servicio técnico de electrodomésticos" class="nav-logo-img" />
+    </a>
+    <nav class="nav-links" aria-label="Menú principal">
+      <a href="#inicio"     class="nav-link">Inicio</a>
+      <a href="#servicios"  class="nav-link">Servicios</a>
+      <a href="#marcas"     class="nav-link">Marcas</a>
+      <a href="#beneficios" class="nav-link">Por qué elegirnos</a>
+      <a href="#contacto"   class="nav-link">Contacto</a>
+    </nav>
+    <a href="https://wa.me/529611750266?text=Hola%2C%20quiero%20solicitar%20una%20cotizaci%C3%B3n%20para%20reparaci%C3%B3n%20de%20l%C3%ADnea%20blanca"
+       class="nav-cta" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.534 4.052 1.472 5.761L.057 23.882l6.304-1.654C8.01 23.041 9.965 23.5 12 23.5c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+      Solicitar Cotización
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav class="mobile-nav">
+      <a href="#inicio"     class="mobile-link">Inicio</a>
+      <a href="#servicios"  class="mobile-link">Servicios</a>
+      <a href="#marcas"     class="mobile-link">Marcas</a>
+      <a href="#beneficios" class="mobile-link">Por qué elegirnos</a>
+      <a href="#contacto"   class="mobile-link">Contacto</a>
+    </nav>
+    <a href="https://wa.me/529611750266?text=Hola%2C%20quiero%20solicitar%20una%20cotizaci%C3%B3n%20para%20reparaci%C3%B3n%20de%20l%C3%ADnea%20blanca"
+       class="mobile-cta" target="_blank" rel="noopener">Solicitar Cotización por WhatsApp</a>
+  </div>
+</header>
+<div class="menu-scrim" id="menuScrim"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  HERO                                                       -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="inicio" class="hero">
+
+  <div class="hero-bg">
+    <div class="hero-bg-photo">
+      <img
+        src="https://images.pexels.com/photos/38190070/pexels-photo-38190070.jpeg?auto=compress&cs=tinysrgb&w=1920"
+        alt="Técnico especializado reparando un electrodoméstico de línea blanca"
+        aria-hidden="true"
+        loading="eager"
+        class="js-parallax-bg"
+      />
+    </div>
+    <div class="hero-gradient-overlay"></div>
+    <div class="hero-grid-overlay"></div>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+    <div class="hero-speed-lines"></div>
+  </div>
+
+  <div class="hero-bubbles" id="heroBubbles" aria-hidden="true"></div>
+  <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+
+  <div class="hero-container">
+
+    <div class="hero-copy" id="heroCopy">
+
+      <div class="hero-badge hero-in-item">
+        <span class="badge-live"></span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="#7dd3fc"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Refrigeradores · Lavadoras · Boilers · Estufas — <strong>Servicio el Mismo Día</strong>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="ht-top hero-in-item">Reparación experta de</span>
+        <span class="ht-main hero-in-item" id="heroTypewriter" data-words='["Refrigeradores","Lavadoras y Secadoras","Boilers","Estufas","Extractores","Enfriadores y Mesas Frías"]'>Refrigeradores</span>
+        <span class="ht-accent hero-in-item">Más de 30 años de experiencia en línea blanca</span>
+      </h1>
+
+      <p class="hero-subtitle hero-in-item">
+        Técnicos con más de 30 años de experiencia en refrigeradores, enfriadores, lavadoras,
+        boilers, estufas y extractores. Atención directa por teléfono y WhatsApp, servicio el
+        mismo día y trabajo con equipos de las principales marcas del mercado.
+      </p>
+
+      <div class="hero-ctas hero-in-item">
+        <a href="https://wa.me/529611750266?text=Hola%2C%20quiero%20solicitar%20una%20cotizaci%C3%B3n%20para%20reparaci%C3%B3n%20de%20l%C3%ADnea%20blanca"
+           class="btn-primary-hero" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.534 4.052 1.472 5.761L.057 23.882l6.304-1.654C8.01 23.041 9.965 23.5 12 23.5c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+          Cotizar por WhatsApp
+        </a>
+        <a href="tel:+529611750266" class="btn-secondary-hero">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.9 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Llamar Ahora
+        </a>
+      </div>
+
+      <div class="hero-trust hero-in-item">
+        <div class="trust-pill">
+          <svg width="13" height="13" viewBox="0 0 24 24" stroke="#4ade80" stroke-width="2.5" fill="none"><polyline points="20 6 9 17 4 12"/></svg>
+          +30 años de experiencia
+        </div>
+        <div class="trust-pill">
+          <svg width="13" height="13" viewBox="0 0 24 24" stroke="#4ade80" stroke-width="2.5" fill="none"><polyline points="20 6 9 17 4 12"/></svg>
+          Servicio el mismo día
+        </div>
+        <div class="trust-pill">
+          <svg width="13" height="13" viewBox="0 0 24 24" stroke="#4ade80" stroke-width="2.5" fill="none"><polyline points="20 6 9 17 4 12"/></svg>
+          Atención directa y personalizada
+        </div>
+        <div class="trust-pill">
+          <svg width="13" height="13" viewBox="0 0 24 24" stroke="#4ade80" stroke-width="2.5" fill="none"><polyline points="20 6 9 17 4 12"/></svg>
+          Hogares y negocios
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual" id="heroVisual">
+
+      <div class="hero-img-frame" id="heroMainCard">
+        <div class="hero-img-inner">
+          <img
+            src="https://images.pexels.com/photos/32391499/pexels-photo-32391499.jpeg?auto=compress&cs=tinysrgb&w=1000"
+            alt="Técnicos dando servicio a un freezer comercial en taller especializado"
+            loading="eager"
+          />
+          <div class="hero-img-overlay"></div>
+        </div>
+        <div class="hero-img-badge">
+          <div class="hib-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#4ade80"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10" stroke="white" stroke-width="2" fill="none"/></svg>
+          </div>
+          <div>
+            <div class="hib-title">Servicio profesional</div>
+            <div class="hib-sub">● Diagnóstico claro y directo</div>
+          </div>
+        </div>
+        <div class="img-bubble ib1"></div>
+        <div class="img-bubble ib2"></div>
+        <div class="img-bubble ib3"></div>
+      </div>
+
+      <div class="float-card fc-experience" id="fcExperience">
+        <div class="fc-icon fc-icon-blue">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A8FC2" stroke-width="2"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg>
+        </div>
+        <div class="fc-body">
+          <span class="fc-label">Experiencia</span>
+          <span class="fc-value-big">+30 años</span>
+          <span class="fc-note">en línea blanca</span>
+        </div>
+      </div>
+
+      <div class="float-card fc-speed" id="fcSpeed">
+        <div class="fc-icon fc-icon-cyan">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="fc-body">
+          <span class="fc-label">Atención</span>
+          <span class="fc-value-big">Mismo día</span>
+          <span class="fc-note">diagnóstico y reparación</span>
+        </div>
+      </div>
+
+      <div class="float-card fc-brands" id="fcBrands">
+        <div class="fc-icon fc-icon-blue">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4A8FC2" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+        </div>
+        <div class="fc-body">
+          <span class="fc-label">Marcas</span>
+          <span class="fc-value-big">7 marcas</span>
+          <span class="fc-note">Whirlpool, LG, Samsung y más</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="hero-scroll-cue" id="heroScrollCue">
+    <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    <span>Desliza</span>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  ESPECIALIDADES BAR                                         -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<div class="brands-bar reveal-up">
+  <div class="brands-inner">
+    <span class="brands-label">Especializados en:</span>
+    <div class="brands-chips">
+      <span class="brand-chip">🧊 Refrigeradores</span>
+      <span class="brand-sep">·</span>
+      <span class="brand-chip">❄️ Enfriadores y Mesas Frías</span>
+      <span class="brand-sep">·</span>
+      <span class="brand-chip">🧺 Lavadoras y Secadoras</span>
+      <span class="brand-sep">·</span>
+      <span class="brand-chip">🔥 Boilers</span>
+      <span class="brand-sep">·</span>
+      <span class="brand-chip">🍳 Estufas</span>
+      <span class="brand-sep">·</span>
+      <span class="brand-chip">🌀 Extractores</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  SERVICIOS                                                  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="servicios" class="section-dark">
+  <div class="sec-container">
+    <div class="sec-header reveal-up">
+      <div class="sec-badge">Nuestros Servicios</div>
+      <h2 class="sec-title">Servicio Técnico Especializado<br/><em class="em-electric">en Toda la Línea Blanca</em></h2>
+      <p class="sec-subtitle">Diagnóstico claro, reparación profesional y atención directa para tu hogar o tu negocio.</p>
+    </div>
+    <div class="services-grid services-grid-3">
+
+      <article class="service-card stagger-card">
+        <div class="sc-img-wrap">
+          <img src="https://images.pexels.com/photos/5463580/pexels-photo-5463580.jpeg?auto=compress&cs=tinysrgb&w=700"
+               alt="Técnico revisando el sistema de refrigeración de un refrigerador"
+               loading="lazy" />
+          <div class="sc-img-overlay"></div>
+        </div>
+        <div class="sc-body">
+          <div class="sc-icon-wrap ic-blue">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4A8FC2" stroke-width="1.8"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="4" y1="11" x2="20" y2="11"/><line x1="8" y1="6" x2="8" y2="6.5"/><line x1="8" y1="15" x2="8" y2="15.5"/></svg>
+          </div>
+          <h3>Refrigeradores</h3>
+          <p>Reparación de refrigeradores de todas las marcas: fallas de enfriamiento, fugas de gas, ruidos anormales y más.</p>
+          <ul class="sc-list">
+            <li>No enfría correctamente</li>
+            <li>Fugas de gas refrigerante</li>
+            <li>Ruidos o vibración anormal</li>
+            <li>Sellos y empaques desgastados</li>
+          </ul>
+          <a href="https://wa.me/529611750266?text=Hola%2C%20quiero%20cotizar%20la%20reparaci%C3%B3n%20de%20mi%20refrigerador" class="sc-cta" target="_blank" rel="noopener">Cotizar reparación →</a>
+        </div>
+      </article>
+
+      <article class="service-card stagger-card">
+        <div class="sc-img-wrap">
+          <img src="https://images.pexels.com/photos/32391499/pexels-photo-32391499.jpeg?auto=compress&cs=tinysrgb&w=700"
+               alt="Técnicos dando mantenimiento a un freezer comercial"
+               loading="lazy" />
+          <div class="sc-img-overlay"></div>
+          <span class="sc-img-tag">Hogares y negocios</span>
+        </div>
+        <div class="sc-body">
+          <div class="sc-icon-wrap ic-cyan">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="1.8"><path d="M4 4h16v16H4z"/><path d="M4 10h16"/><path d="M9 4v6"/></svg>
+          </div>
+          <h3>Enfriadores y Mesas Frías</h3>
+          <p>Servicio para equipos de refrigeración comercial: enfriadores, mesas frías, heladeras y freezers, ideal para restaurantes y negocios de alimentos.</p>
+          <ul class="sc-list">
+            <li>Enfriadores verticales y horizontales</li>
+            <li>Mesas frías de cocina</li>
+            <li>Heladeras y freezers comerciales</li>
+            <li>Mantenimiento preventivo</li>
+          </ul>
+          <a href="https://wa.me/529611750266?text=Hola%2C%20quiero%20cotizar%20el%20servicio%20de%20mi%20enfriador%20o%20mesa%20fr%C3%ADa" class="sc-cta" target="_blank" rel="noopener">Cotizar servicio →</a>
+        </div>
+      </article>
+
+      <article class="service-card stagger-card">
+        <div class="sc-img-wrap">
+          <img src="https://images.pexels.com/photos/34397245/pexels-photo-34397245.jpeg?auto=compress&cs=tinysrgb&w=700"
+               alt="Tambor de acero inoxidable de una lavadora moderna"
+               loading="lazy" />
+          <div class="sc-img-overlay"></div>
+        </div>
+        <div class="sc-body">
+          <div class="sc-icon-wrap ic-blue">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4A8FC2" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="12" cy="13" r="5"/><circle cx="7" cy="6.5" r="0.8" fill="#4A8FC2" stroke="none"/></svg>
+          </div>
+          <h3>Lavadoras y Secadoras</h3>
+          <p>Reparación de lavadoras, secadoras y centros de lavado: fallas de centrifugado, drenado, ruidos y más.</p>
+          <ul class="sc-list">
+            <li>No centrifuga o no drena</li>
+            <li>Ruidos o vibración excesiva</li>
+            <li>Fugas de agua</li>
+            <li>Secadoras que no calientan</li>
+          </ul>
+          <a href="https://wa.me/529611750266?text=Hola%2C%20quiero%20cotizar%20la%20reparaci%C3%B3n%20de%20mi%20lavadora%20o%20secadora" class="sc-cta" target="_blank" rel="noopener">Cotizar reparación →</a>
+        </div>
+      </article>
+
+      <article class="service-card stagger-card">
+        <div class="sc-img-wrap">
+          <img src="https://images.pexels.com/photos/7859953/pexels-photo-7859953.jpeg?auto=compress&cs=tinysrgb&w=700"
+               alt="Técnico dando mantenimiento a un boiler con instrumentos de precisión"
+               loading="lazy" />
+          <div class="sc-img-overlay"></div>
+        </div>
+        <div class="sc-body">
+          <div class="sc-icon-wrap ic-cyan">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="1.8"><path d="M12 2c3 3 5 6 5 9a5 5 0 0 1-10 0c0-3 2-6 5-9z"/></svg>
+          </div>
+          <h3>Boilers</h3>
+          <p>Servicio técnico para boilers de paso y de depósito: falta de agua caliente, fugas y fallas de encendido.</p>
+          <ul class="sc-list">
+            <li>No calienta el agua</li>
+            <li>Fugas de gas o agua</li>
+            <li>Piloto que no enciende</li>
+            <li>Mantenimiento preventivo</li>
+          </ul>
+          <a href="https://wa.me/529611750266?text=Hola%2C%20quiero%20cotizar%20el%20servicio%20de%20mi%20boiler" class="sc-cta" target="_blank" rel="noopener">Cotizar servicio →</a>
+        </div>
+      </article>
+
+      <article class="service-card stagger-card">
+        <div class="sc-img-wrap">
+          <img src="https://images.pexels.com/photos/37492288/pexels-photo-37492288.jpeg?auto=compress&cs=tinysrgb&w=700"
+               alt="Técnico reparando el quemador de una estufa a gas"
+               loading="lazy" />
+          <div class="sc-img-overlay"></div>
+        </div>
+        <div class="sc-body">
+          <div class="sc-icon-wrap ic-blue">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#4A8FC2" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg>
+          </div>
+          <h3>Estufas</h3>
+          <p>Reparación de estufas y hornos a gas o eléctricos: quemadores, encendido y horno con calentamiento parejo.</p>
+          <ul class="sc-list">
+            <li>Quemadores que no encienden</li>
+            <li>Olor a gas</li>
+            <li>Horno que no calienta parejo</li>
+            <li>Encendido eléctrico dañado</li>
+          </ul>
+          <a href="https://wa.me/529611750266?text=Hola%2C%20quiero%20cotizar%20la%20reparaci%C3%B3n%20de%20mi%20estufa" class="sc-cta" target="_blank" rel="noopener">Cotizar reparación →</a>
+        </div>
+      </article>
+
+      <article class="service-card stagger-card">
+        <div class="sc-img-wrap">
+          <img src="https://images.pexels.com/photos/38310806/pexels-photo-38310806.jpeg?auto=compress&cs=tinysrgb&w=700"
+               alt="Campana extractora moderna de acero inoxidable en cocina premium"
+               loading="lazy" />
+          <div class="sc-img-overlay"></div>
+        </div>
+        <div class="sc-body">
+          <div class="sc-icon-wrap ic-cyan">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="1.8"><path d="M5 4h14l-2 6H7z"/><path d="M9 10v10M15 10v10"/></svg>
+          </div>
+          <h3>Extractores</h3>
+          <p>Mantenimiento y reparación de campanas extractoras: poca succión, ruido excesivo y motores dañados.</p>
+          <ul class="sc-list">
+            <li>Poca succión</li>
+            <li>Ruido excesivo</li>
+            <li>Motor que no enciende</li>
+            <li>Limpieza y mantenimiento</li>
+          </ul>
+          <a href="https://wa.me/529611750266?text=Hola%2C%20quiero%20cotizar%20el%20servicio%20de%20mi%20extractor" class="sc-cta" target="_blank" rel="noopener">Cotizar servicio →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  FALLAS COMUNES                                             -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="section-solutions reveal-up">
+  <div class="sec-container">
+    <div class="sec-header reveal-up">
+      <div class="sec-badge">Fallas Comunes</div>
+      <h2 class="sec-title">¿Tu Equipo Presenta<br/><em class="em-electric">Alguna de Estas Fallas?</em></h2>
+      <p class="sec-subtitle">Diagnosticamos y resolvemos los problemas más frecuentes en equipos de línea blanca.</p>
+    </div>
+    <div class="solutions-grid">
+      <div class="solution-item stagger-card">
+        <div class="sol-icon">🧊</div>
+        <h4>Refrigerador no enfría</h4>
+        <p>Puede deberse a fugas de gas, termostato dañado o fallas del compresor.</p>
+      </div>
+      <div class="solution-item stagger-card">
+        <div class="sol-icon">🌊</div>
+        <h4>Lavadora no centrifuga</h4>
+        <p>Fallas eléctricas, banda floja o bomba de drenado obstruida.</p>
+      </div>
+      <div class="solution-item stagger-card">
+        <div class="sol-icon">🔥</div>
+        <h4>Boiler sin agua caliente</h4>
+        <p>Piloto apagado, falla en el termopar o sedimento acumulado.</p>
+      </div>
+      <div class="solution-item stagger-card">
+        <div class="sol-icon">🍳</div>
+        <h4>Estufa no enciende</h4>
+        <p>Chispero dañado, quemador sucio u obstrucción en el paso de gas.</p>
+      </div>
+      <div class="solution-item stagger-card">
+        <div class="sol-icon">🌀</div>
+        <h4>Extractor hace ruido o no jala</h4>
+        <p>Motor desgastado, filtros saturados o ductos obstruidos.</p>
+      </div>
+      <div class="solution-item stagger-card">
+        <div class="sol-icon">❄️</div>
+        <h4>Mesa fría o enfriador fuera de servicio</h4>
+        <p>Revisión completa para que tu negocio de alimentos no se detenga.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  MARCAS                                                     -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="marcas" class="section-brands">
+  <div class="brands-bg-photo">
+    <img
+      src="https://images.pexels.com/photos/38190070/pexels-photo-38190070.jpeg?auto=compress&cs=tinysrgb&w=1920"
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+      class="js-parallax-bg"
+    />
+  </div>
+  <div class="brands-bg-overlay"></div>
+  <div class="brands-particles" id="brandsParticles" aria-hidden="true"></div>
+  <div class="sec-container">
+    <div class="sec-header on-dark reveal-up">
+      <div class="sec-badge">Marcas de Confianza</div>
+      <h2 class="sec-title">Trabajamos con Equipos de<br/><em class="em-electric">Las Principales Marcas del Mercado</em></h2>
+      <p class="sec-subtitle">Contamos con la experiencia técnica para dar servicio a los equipos de línea blanca más utilizados en hogares y negocios.</p>
+    </div>
+    <div class="brand-logos-row reveal-up">
+      <span class="brand-logo-chip">Whirlpool</span>
+      <span class="brand-logo-chip">Samsung</span>
+      <span class="brand-logo-chip">LG</span>
+      <span class="brand-logo-chip">Mabe</span>
+      <span class="brand-logo-chip">GE</span>
+      <span class="brand-logo-chip">Frigidaire</span>
+      <span class="brand-logo-chip">Bosch</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  BENEFICIOS                                                 -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="beneficios" class="section-benefits">
+  <div class="benefits-glow-left"></div>
+  <div class="benefits-glow-right"></div>
+  <div class="sec-container">
+    <div class="sec-header reveal-up">
+      <div class="sec-badge">Por Qué Elegirnos</div>
+      <h2 class="sec-title">Un Servicio Técnico<br/><em class="em-electric">en el que Puedes Confiar</em></h2>
+      <p class="sec-subtitle">Experiencia, rapidez y atención directa para tu hogar o tu negocio.</p>
+    </div>
+    <div class="benefits-grid">
+
+      <div class="benefit-card stagger-card">
+        <div class="benefit-icon-wrap bi-blue">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F5C99" stroke-width="2"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg>
+        </div>
+        <h4>+30 Años de Experiencia</h4>
+        <p>Décadas de trabajo en reparación y mantenimiento de electrodomésticos de línea blanca.</p>
+      </div>
+
+      <div class="benefit-card stagger-card">
+        <div class="benefit-icon-wrap bi-cyan">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h4>Servicio el Mismo Día</h4>
+        <p>Atendemos tu solicitud con rapidez para que tu equipo vuelva a funcionar cuanto antes.</p>
+      </div>
+
+      <div class="benefit-card stagger-card">
+        <div class="benefit-icon-wrap bi-green">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.9 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h4>Atención Directa y Personalizada</h4>
+        <p>Hablas directamente con nosotros por teléfono o WhatsApp, sin intermediarios.</p>
+      </div>
+
+      <div class="benefit-card stagger-card">
+        <div class="benefit-icon-wrap bi-yellow">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6"/></svg>
+        </div>
+        <h4>Hogares y Negocios</h4>
+        <p>Damos servicio a equipos domésticos y a equipos comerciales como mesas frías y enfriadores.</p>
+      </div>
+
+      <div class="benefit-card stagger-card">
+        <div class="benefit-icon-wrap bi-purple">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><path d="M12 2 4 5v6c0 5 3.5 9 8 11 4.5-2 8-6 8-11V5z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <h4>Trabajamos con las Principales Marcas</h4>
+        <p>Whirlpool, Samsung, LG, Mabe, GE, Frigidaire, Bosch y más.</p>
+      </div>
+
+      <div class="benefit-card stagger-card">
+        <div class="benefit-icon-wrap bi-blue">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F5C99" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <h4>Diagnóstico Claro</h4>
+        <p>Te explicamos el problema y la solución antes de realizar la reparación.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  PROMO                                                      -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="section-promo reveal-up">
+  <div class="promo-bg-photo">
+    <img
+      src="https://images.pexels.com/photos/34734504/pexels-photo-34734504.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+      class="js-parallax-bg"
+    />
+  </div>
+  <div class="promo-bg-overlay"></div>
+  <div class="promo-particles" id="promoParticles" aria-hidden="true"></div>
+  <div class="sec-container">
+    <div class="promo-inner">
+      <div class="promo-left">
+        <div class="promo-eyebrow">🔧 Servicio Técnico a Domicilio</div>
+        <h2 class="promo-title">¿Tu Refrigerador, Lavadora o Boiler<br/><span class="promo-highlight">Dejó de Funcionar?</span></h2>
+        <p class="promo-body">Cuéntanos qué equipo necesita revisión y coordinamos tu servicio técnico. Atendemos hogares y negocios con la misma experiencia de más de 30 años.</p>
+        <div class="promo-checks">
+          <span class="pc-item"><svg width="14" height="14" viewBox="0 0 24 24" stroke="#4ade80" stroke-width="2.5" fill="none"><polyline points="20 6 9 17 4 12"/></svg> Atención el mismo día</span>
+          <span class="pc-item"><svg width="14" height="14" viewBox="0 0 24 24" stroke="#4ade80" stroke-width="2.5" fill="none"><polyline points="20 6 9 17 4 12"/></svg> +30 años de experiencia</span>
+          <span class="pc-item"><svg width="14" height="14" viewBox="0 0 24 24" stroke="#4ade80" stroke-width="2.5" fill="none"><polyline points="20 6 9 17 4 12"/></svg> Hogares y negocios</span>
+        </div>
+      </div>
+      <div class="promo-right">
+        <div class="promo-card">
+          <div class="promo-card-header">Contáctanos ahora</div>
+          <div class="promo-card-icon">🔧</div>
+          <div class="promo-card-tagline">Servicio Técnico</div>
+          <div class="promo-card-pill">✅ Atención el Mismo Día</div>
+          <a href="https://wa.me/529611750266?text=Hola%2C%20quiero%20solicitar%20servicio%20t%C3%A9cnico%20de%20l%C3%ADnea%20blanca"
+             class="btn-primary-hero promo-btn" target="_blank" rel="noopener">Solicitar por WhatsApp</a>
+          <div class="promo-card-eta">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Respondemos lo antes posible
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  PROCESO                                                    -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="proceso" class="section-process">
+  <div class="sec-container">
+    <div class="sec-header reveal-up">
+      <div class="sec-badge">Cómo Funciona</div>
+      <h2 class="sec-title">Tu Equipo Funcionando<br/><em class="em-electric">en 4 Pasos Simples</em></h2>
+      <p class="sec-subtitle">Un proceso claro y directo, del primer contacto a la reparación.</p>
+    </div>
+    <div class="process-wrap process-wrap-4">
+      <div class="process-step stagger-card">
+        <div class="ps-number">01</div>
+        <div class="ps-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1F5C99" stroke-width="2"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.534 4.052 1.472 5.761L.057 23.882l6.304-1.654C8.01 23.041 9.965 23.5 12 23.5c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg></div>
+        <h4>Contáctanos</h4>
+        <p>Escríbenos por WhatsApp o llámanos y cuéntanos qué equipo necesita servicio.</p>
+      </div>
+      <div class="process-step stagger-card">
+        <div class="ps-number">02</div>
+        <div class="ps-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><polyline points="9 12 11 14 15 10"/></svg></div>
+        <h4>Diagnóstico</h4>
+        <p>Revisamos el equipo y te explicamos con claridad el problema y la solución.</p>
+      </div>
+      <div class="process-step stagger-card">
+        <div class="ps-number">03</div>
+        <div class="ps-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h4>Reparación</h4>
+        <p>Realizamos la reparación con más de 30 años de experiencia, muchas veces el mismo día.</p>
+      </div>
+      <div class="process-step stagger-card">
+        <div class="ps-number">04</div>
+        <div class="ps-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+        <h4>Equipo Funcionando</h4>
+        <p>Verificamos que tu equipo funcione correctamente antes de finalizar el servicio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  AUTORIDAD / STATS                                          -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="section-authority">
+  <div class="authority-bg-photo">
+    <img
+      src="https://images.pexels.com/photos/38190070/pexels-photo-38190070.jpeg?auto=compress&cs=tinysrgb&w=1920"
+      alt=""
+      aria-hidden="true"
+      loading="lazy"
+      class="js-parallax-bg"
+    />
+  </div>
+  <div class="authority-bg-glow"></div>
+  <div class="authority-particles" id="authorityParticles" aria-hidden="true"></div>
+  <div class="sec-container">
+    <div class="authority-inner reveal-up">
+      <div class="authority-lightning">🔧</div>
+      <h2 class="authority-title">Experiencia Real en<br/><span class="em-accent">Reparación de Línea Blanca</span></h2>
+      <p class="authority-desc">Más de 30 años reparando refrigeradores, lavadoras, boilers, estufas, extractores y equipos de refrigeración comercial. Atención directa y servicio el mismo día.</p>
+      <div class="stats-row">
+        <div class="stat-box"><span class="stat-num" data-target="30" data-suffix="+">30+</span><span class="stat-lbl">Años de Experiencia</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat-box"><span class="stat-num">Mismo Día</span><span class="stat-lbl">Tiempo de Respuesta</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat-box"><span class="stat-num" data-target="7" data-suffix="">7</span><span class="stat-lbl">Marcas Atendidas</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat-box"><span class="stat-num" data-target="6" data-suffix="">6</span><span class="stat-lbl">Especialidades en Línea Blanca</span></div>
+      </div>
+      <a href="https://wa.me/529611750266?text=Hola%2C%20quiero%20solicitar%20servicio%20t%C3%A9cnico%20de%20l%C3%ADnea%20blanca"
+         class="btn-primary-hero authority-btn" target="_blank" rel="noopener">
+        Contactar por WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  CONTACTO                                                   -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="contacto" class="section-contact">
+  <div class="sec-container">
+    <div class="sec-header reveal-up">
+      <div class="sec-badge">Contáctanos</div>
+      <h2 class="sec-title">¿Necesitas Servicio Técnico<br/><em class="em-electric">de Línea Blanca?</em></h2>
+      <p class="sec-subtitle">Escríbenos o llámanos y coordinamos tu servicio.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal-up">
+        <div class="contact-wa-card">
+          <div class="cwa-icon">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="#16a34a"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.534 4.052 1.472 5.761L.057 23.882l6.304-1.654C8.01 23.041 9.965 23.5 12 23.5c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.5c-1.94 0-3.757-.52-5.317-1.427l-.381-.226-3.96 1.039 1.057-3.855-.247-.397A9.448 9.448 0 0 1 2.5 12c0-5.238 4.262-9.5 9.5-9.5s9.5 4.262 9.5 9.5-4.262 9.5-9.5 9.5z"/></svg>
+          </div>
+          <div class="cwa-text">
+            <span class="cwa-label">WhatsApp Directo</span>
+            <a href="https://wa.me/529611750266" class="cwa-number" target="_blank" rel="noopener">+52 961 175 0266</a>
+          </div>
+        </div>
+        <div class="contact-details">
+          <div class="cd-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1F5C99" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.9 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>+52 961 175 0266</span></div>
+          <div class="cd-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Atención directa y servicio el mismo día</span></div>
+          <div class="cd-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6"/></svg><span>Hogares y negocios · Todas las marcas</span></div>
+        </div>
+        <a href="https://wa.me/529611750266?text=Hola%2C%20quiero%20solicitar%20servicio%20t%C3%A9cnico%20de%20l%C3%ADnea%20blanca"
+           class="btn-primary-hero contact-wa-btn" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.534 4.052 1.472 5.761L.057 23.882l6.304-1.654C8.01 23.041 9.965 23.5 12 23.5c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+          Enviar Mensaje por WhatsApp
+        </a>
+        <a href="tel:+529611750266" class="btn-call-contact" style="margin-top:10px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.9 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Llamar Ahora
+        </a>
+      </div>
+      <div class="contact-form-wrap reveal-up">
+        <form class="contact-form" id="contactForm">
+          <h3 class="form-title">Solicita tu Servicio Técnico</h3>
+          <div class="form-row-2">
+            <div class="form-group"><label for="f-nombre">Nombre completo *</label><input type="text" id="f-nombre" name="nombre" placeholder="Tu nombre" required /></div>
+            <div class="form-group"><label for="f-tel">Teléfono / WhatsApp *</label><input type="tel" id="f-tel" name="telefono" placeholder="Tu número" required /></div>
+          </div>
+          <div class="form-group">
+            <label for="f-equipo">Tipo de equipo *</label>
+            <select id="f-equipo" name="equipo" required>
+              <option value="">Selecciona el equipo</option>
+              <option value="refrigerador">Refrigerador</option>
+              <option value="enfriador">Enfriador o mesa fría</option>
+              <option value="lavadora">Lavadora o secadora</option>
+              <option value="boiler">Boiler</option>
+              <option value="estufa">Estufa</option>
+              <option value="extractor">Extractor</option>
+              <option value="otro">Otro equipo</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="f-zona">Zona o colonia</label><input type="text" id="f-zona" name="zona" placeholder="Opcional" /></div>
+          <div class="form-group"><label for="f-msg">Cuéntanos qué falla presenta tu equipo</label><textarea id="f-msg" name="mensaje" rows="3" placeholder="Ej. el refrigerador no enfría, la lavadora no centrifuga..."></textarea></div>
+          <button type="submit" class="btn-primary-hero form-btn">Solicitar Servicio por WhatsApp</button>
+          <p class="form-privacy">Tu información se usa únicamente para contactarte y coordinar tu servicio.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  CTA FINAL                                                  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="section-cta-final reveal-up">
+  <div class="cta-final-glow cta-glow-1"></div>
+  <div class="cta-final-glow cta-glow-2"></div>
+  <div class="cta-final-particles" id="ctaFinalParticles" aria-hidden="true"></div>
+  <div class="sec-container">
+    <div class="cta-final-inner">
+      <h2 class="cta-final-title">¿Tu Equipo de Línea Blanca<br/>Necesita Reparación?</h2>
+      <p class="cta-final-subtitle">Escríbenos por WhatsApp o llámanos. Más de 30 años de experiencia reparando refrigeradores, lavadoras, boilers, estufas, extractores y equipos de refrigeración comercial.</p>
+      <div class="cta-final-buttons">
+        <a href="https://wa.me/529611750266?text=Hola%2C%20quiero%20solicitar%20servicio%20t%C3%A9cnico%20de%20l%C3%ADnea%20blanca"
+           class="cta-btn-wa" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.534 4.052 1.472 5.761L.057 23.882l6.304-1.654C8.01 23.041 9.965 23.5 12 23.5c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+          Enviar WhatsApp
+        </a>
+        <a href="tel:+529611750266" class="cta-btn-call">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.9 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Llamar Ahora
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!--  FOOTER                                                     -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="footer-top-line"></div>
+  <div class="sec-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="imagenes/logo.svg" alt="FixPro Línea Blanca" class="footer-logo-img" />
+        </div>
+        <p class="footer-desc">Servicio técnico especializado en línea blanca: refrigeradores, lavadoras, boilers, estufas, extractores y equipos de refrigeración comercial. Más de 30 años de experiencia.</p>
+        <div class="footer-brands-pill"><span>🧊 Refrigeración</span><span>🧺 Lavado</span><span>🔥 Boilers</span></div>
+      </div>
+      <div class="footer-col">
+        <h5>Servicios</h5>
+        <ul>
+          <li><a href="#servicios">Refrigeradores</a></li>
+          <li><a href="#servicios">Enfriadores y Mesas Frías</a></li>
+          <li><a href="#servicios">Lavadoras y Secadoras</a></li>
+          <li><a href="#servicios">Boilers</a></li>
+          <li><a href="#servicios">Estufas</a></li>
+          <li><a href="#servicios">Extractores</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#marcas">Marcas</a></li>
+          <li><a href="#beneficios">Por qué elegirnos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <div class="footer-contact-items">
+          <div class="fci"><svg width="14" height="14" viewBox="0 0 24 24" fill="#16a34a"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.534 4.052 1.472 5.761L.057 23.882l6.304-1.654C8.01 23.041 9.965 23.5 12 23.5c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg><a href="https://wa.me/529611750266" target="_blank" rel="noopener">+52 961 175 0266</a></div>
+          <div class="fci"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4a9fff" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.9 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+529611750266">Llamar ahora</a></div>
+          <div class="fci"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span>Atención directa y servicio el mismo día</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 FixPro Línea Blanca. Todos los derechos reservados.</p>
+      <p class="footer-tagline">🔧 Reparación Profesional de Línea Blanca</p>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/529611750266?text=Hola%2C%20quiero%20solicitar%20servicio%20t%C3%A9cnico%20de%20l%C3%ADnea%20blanca"
+   class="wa-float" id="waFloat" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <div class="wa-pulse-ring"></div>
+  <div class="wa-pulse-ring wa-pulse-ring-2"></div>
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.089.534 4.052 1.472 5.761L.057 23.882l6.304-1.654C8.01 23.041 9.965 23.5 12 23.5c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.5c-1.94 0-3.757-.52-5.317-1.427l-.381-.226-3.96 1.039 1.057-3.855-.247-.397A9.448 9.448 0 0 1 2.5 12c0-5.238 4.262-9.5 9.5-9.5s9.5 4.262 9.5 9.5-4.262 9.5-9.5 9.5z"/></svg>
+  <span class="wa-tooltip">¡Escríbenos!</span>
+</a>
+
+<!-- Botón de llamada flotante (móvil) -->
+<a href="tel:+529611750266" class="call-float" id="callFloat" aria-label="Llamar ahora">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.9 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+</a>
+
+<script src="main.js"></script>
+</body>
+</html>
