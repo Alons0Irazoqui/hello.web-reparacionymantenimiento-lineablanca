@@ -7,7 +7,7 @@
   "use strict";
 
   var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var WHATSAPP_NUMBER = "529611750266";
+  var WHATSAPP_NUMBER = "526461315743";
 
   /* ── Utilidades ─────────────────────────────────────────────── */
   function rand(min,max){ return Math.random()*(max-min)+min; }
